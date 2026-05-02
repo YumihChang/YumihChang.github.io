@@ -1,11 +1,9 @@
-/* RESET */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-/* BODY */
 body {
   background: black;
   color: white;
@@ -19,8 +17,8 @@ header {
   width: 100%;
   height: 60px;
 
-  display: grid;
-  grid-template-columns: 1fr auto 1fr;
+  display: flex;
+  justify-content: space-between;
   align-items: center;
 
   padding: 0 40px;
@@ -30,32 +28,12 @@ header {
   border-bottom: 1px solid rgba(255,255,255,0.2);
 }
 
-/* LEFT */
 .logo {
   font-family: "Anton", sans-serif;
   font-size: 22px;
 }
 
-/* CENTER NAV */
-nav {
-  display: flex;
-  gap: 30px;
-}
-
-nav a {
-  text-decoration: none;
-  color: white;
-  font-size: 12px;
-  opacity: 0.8;
-}
-
-nav a:hover {
-  opacity: 1;
-}
-
-/* RIGHT */
 .linkedin {
-  justify-self: end;
   text-decoration: none;
   color: white;
   font-weight: bold;
@@ -71,7 +49,7 @@ nav a:hover {
   scroll-snap-align: start;
 }
 
-/* VIDEO BACKGROUND */
+/* VIDEO */
 .project video {
   position: absolute;
   width: 100%;
@@ -79,14 +57,14 @@ nav a:hover {
   object-fit: cover;
 }
 
-/* DARK OVERLAY */
+/* OVERLAY */
 .overlay {
   position: absolute;
   inset: 0;
   background: rgba(0,0,0,0.25);
 }
 
-/* TEXT BLOCK */
+/* TEXT */
 .caption {
   position: absolute;
   bottom: 10%;
@@ -95,7 +73,6 @@ nav a:hover {
   z-index: 2;
 }
 
-/* SQUARESPACE-STYLE HIGHLIGHT */
 .caption h1,
 .caption p {
   display: inline;
@@ -106,7 +83,6 @@ nav a:hover {
   -webkit-box-decoration-break: clone;
 }
 
-/* TITLE */
 .caption h1 {
   font-family: "Anton", sans-serif;
   font-size: clamp(36px, 5vw, 70px);
@@ -114,16 +90,13 @@ nav a:hover {
   text-transform: uppercase;
 }
 
-/* DESCRIPTION */
 .caption p {
   display: inline-block;
   margin-top: 15px;
   font-size: 14px;
-  line-height: 1.5;
 }
 
 /* SCROLL SNAP */
 html {
   scroll-snap-type: y mandatory;
-  scroll-behavior: smooth;
 }
