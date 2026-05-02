@@ -1,110 +1,129 @@
+/* RESET */
 * {
+  margin: 0;
+  padding: 0;
   box-sizing: border-box;
 }
 
+/* BODY */
 body {
-  margin: 0;
-  background: #000;
+  background: black;
   color: white;
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: "Inter", sans-serif;
 }
 
+/* HEADER */
 header {
   position: fixed;
   top: 0;
-  left: 0;
   width: 100%;
-  height: 54px;
-  z-index: 10;
+  height: 60px;
+
   display: grid;
   grid-template-columns: 1fr auto 1fr;
   align-items: center;
-  padding: 0 36px;
-  background: rgba(0, 0, 0, 0.9);
-  border-bottom: 1px solid rgba(255,255,255,0.25);
+
+  padding: 0 40px;
+  z-index: 100;
+
+  background: rgba(0,0,0,0.9);
+  border-bottom: 1px solid rgba(255,255,255,0.2);
 }
 
+/* LEFT */
 .logo {
-  font-weight: 900;
+  font-family: "Anton", sans-serif;
   font-size: 22px;
-  letter-spacing: -1px;
 }
 
+/* CENTER NAV */
 nav {
   display: flex;
-  gap: 28px;
+  gap: 30px;
 }
 
-nav a,
-.linkedin {
-  color: white;
+nav a {
   text-decoration: none;
+  color: white;
   font-size: 12px;
+  opacity: 0.8;
 }
 
+nav a:hover {
+  opacity: 1;
+}
+
+/* RIGHT */
 .linkedin {
   justify-self: end;
+  text-decoration: none;
+  color: white;
   font-weight: bold;
 }
 
+/* PROJECT SECTIONS */
 .project {
   position: relative;
   height: 100vh;
   width: 100%;
   overflow: hidden;
+
+  scroll-snap-align: start;
 }
 
+/* VIDEO BACKGROUND */
 .project video {
   position: absolute;
-  inset: 0;
   width: 100%;
   height: 100%;
   object-fit: cover;
 }
 
-.project::after {
-  content: "";
+/* DARK OVERLAY */
+.overlay {
   position: absolute;
   inset: 0;
-  background: rgba(0,0,0,0.18);
+  background: rgba(0,0,0,0.25);
 }
 
+/* TEXT BLOCK */
 .caption {
   position: absolute;
-  left: 12%;
   bottom: 10%;
+  left: 10%;
+  max-width: 500px;
   z-index: 2;
-  max-width: 420px;
 }
 
+/* SQUARESPACE-STYLE HIGHLIGHT */
 .caption h1,
 .caption p {
   display: inline;
-  background: rgba(0,0,0,0.82);
+  background: rgba(0,0,0,0.85);
+  padding: 0.1em 0.25em;
+
   box-decoration-break: clone;
   -webkit-box-decoration-break: clone;
-  padding: 0.12em 0.22em;
 }
 
+/* TITLE */
 .caption h1 {
-  font-size: clamp(32px, 4vw, 58px);
+  font-family: "Anton", sans-serif;
+  font-size: clamp(36px, 5vw, 70px);
   line-height: 0.95;
-  font-weight: 900;
-  letter-spacing: -1.5px;
+  text-transform: uppercase;
 }
 
+/* DESCRIPTION */
 .caption p {
   display: inline-block;
-  margin-top: 18px;
-  font-size: 13px;
-  line-height: 1.4;
+  margin-top: 15px;
+  font-size: 14px;
+  line-height: 1.5;
 }
 
+/* SCROLL SNAP */
 html {
   scroll-snap-type: y mandatory;
   scroll-behavior: smooth;
-}
-
-.project {
-  scroll-snap-align: start;
 }
