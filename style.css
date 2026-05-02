@@ -121,10 +121,6 @@ header {
 /* DESCRIPTION */
 .caption p {
   display: inline;
-
-  position: relative;
-  top: 18px;
-
   font-size: 14px;
   line-height: 1.5;
 
