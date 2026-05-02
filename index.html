@@ -1,75 +1,46 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Connie Chang</title>
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="style.css" />
 </head>
-
 <body>
-
-  <!-- HEADER -->
-  <header class="header">
+  <header>
     <div class="logo">CONNIE CHANG</div>
-
-    <div class="nav">
-      <a href="https://www.linkedin.com" target="_blank">
-        <img src="linkedin.png" alt="LinkedIn" />
-      </a>
-    </div>
+    <nav>
+      <a href="#work">Work</a>
+      <a href="#game">Game</a>
+      <a href="#ml">ML Art</a>
+    </nav>
+    <a class="linkedin" href="https://linkedin.com/in/YOUR-LINK" target="_blank">in</a>
   </header>
 
-  <!-- PROJECTS -->
-  <section class="project">
-    <video autoplay muted loop playsinline>
-      <source src="video1.mp4" type="video/mp4">
-    </video>
-    <div class="overlay">
-      <h1>PROJECT ONE</h1>
-      <p>Description of project one goes here.</p>
-    </div>
-  </section>
+  <main id="work">
+    <section class="project">
+      <video src="videos/marotta.mp4" autoplay muted loop playsinline></video>
+      <div class="caption">
+        <h1>MAROTTA: POWER AND<br>ACTUATION SYSTEMS</h1>
+        <p>Assisted in the production of a promotional reel for Marotta Controls, Inc.</p>
+      </div>
+    </section>
 
-  <section class="project">
-    <video autoplay muted loop playsinline>
-      <source src="video2.mp4" type="video/mp4">
-    </video>
-    <div class="overlay">
-      <h1>PROJECT TWO</h1>
-      <p>Description of project two goes here.</p>
-    </div>
-  </section>
+    <section class="project">
+      <video src="videos/qualcomm.mp4" autoplay muted loop playsinline></video>
+      <div class="caption">
+        <h1>QUALCOMM: MWC<br>2024</h1>
+        <p>Assisted in the production of real-time data demonstrations for Qualcomm Technologies, INC.</p>
+      </div>
+    </section>
 
-  <section class="project">
-    <video autoplay muted loop playsinline>
-      <source src="video3.mp4" type="video/mp4">
-    </video>
-    <div class="overlay">
-      <h1>PROJECT THREE</h1>
-      <p>Description of project three goes here.</p>
-    </div>
-  </section>
-
-  <section class="project">
-    <video autoplay muted loop playsinline>
-      <source src="video4.mp4" type="video/mp4">
-    </video>
-    <div class="overlay">
-      <h1>PROJECT FOUR</h1>
-      <p>Description of project four goes here.</p>
-    </div>
-  </section>
-
-  <section class="project">
-    <video autoplay muted loop playsinline>
-      <source src="video5.mp4" type="video/mp4">
-    </video>
-    <div class="overlay">
-      <h1>PROJECT FIVE</h1>
-      <p>Description of project five goes here.</p>
-    </div>
-  </section>
-
+    <section class="project">
+      <video src="videos/archviz.mp4" autoplay muted loop playsinline></video>
+      <div class="caption">
+        <h1>ARCHITECTURAL<br>VISUALIZATION</h1>
+        <p>Design, modeling, environment, animation and video editing.</p>
+      </div>
+    </section>
+  </main>
 </body>
 </html>
