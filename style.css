@@ -64,17 +64,12 @@ header {
 
 /* VIDEO AND GIF BACKGROUND */
 .project video,
-.project img,
 .project .bg-media {
   position: absolute;
-  top: 0;
-  left: 0;
+  inset: 0;
 
-  width: 100%;
-  height: 100%;
-
-  min-width: 100%;
-  min-height: 100%;
+  width: 100vw;
+  height: 100vh;
 
   object-fit: cover;
   object-position: center center;
