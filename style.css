@@ -1,73 +1,110 @@
 * {
-  margin: 0;
-  padding: 0;
   box-sizing: border-box;
 }
 
 body {
-  font-family: Arial, sans-serif;
-  background: black;
+  margin: 0;
+  background: #000;
   color: white;
+  font-family: Arial, Helvetica, sans-serif;
 }
 
-/* HEADER */
-.header {
+header {
   position: fixed;
   top: 0;
+  left: 0;
   width: 100%;
-  height: 60px;
-  background: black;
-  display: flex;
-  justify-content: space-between;
+  height: 54px;
+  z-index: 10;
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
   align-items: center;
-  padding: 0 20px;
-  z-index: 1000;
-  border-bottom: 1px solid #222;
+  padding: 0 36px;
+  background: rgba(0, 0, 0, 0.9);
+  border-bottom: 1px solid rgba(255,255,255,0.25);
 }
 
 .logo {
+  font-weight: 900;
+  font-size: 22px;
+  letter-spacing: -1px;
+}
+
+nav {
+  display: flex;
+  gap: 28px;
+}
+
+nav a,
+.linkedin {
+  color: white;
+  text-decoration: none;
+  font-size: 12px;
+}
+
+.linkedin {
+  justify-self: end;
   font-weight: bold;
-  letter-spacing: 1px;
 }
 
-.nav img {
-  width: 22px;
-  height: 22px;
-}
-
-/* PROJECT SECTIONS */
 .project {
   position: relative;
   height: 100vh;
+  width: 100%;
   overflow: hidden;
 }
 
 .project video {
+  position: absolute;
+  inset: 0;
   width: 100%;
   height: 100%;
   object-fit: cover;
 }
 
-/* TEXT OVERLAY */
-.overlay {
+.project::after {
+  content: "";
   position: absolute;
-  bottom: 40px;
-  left: 40px;
-  max-width: 400px;
+  inset: 0;
+  background: rgba(0,0,0,0.18);
 }
 
-.overlay h1 {
-  font-size: 32px;
-  font-weight: bold;
-  background: rgba(0,0,0,0.6);
-  display: inline;
-  padding: 5px 10px;
+.caption {
+  position: absolute;
+  left: 12%;
+  bottom: 10%;
+  z-index: 2;
+  max-width: 420px;
 }
 
-.overlay p {
-  margin-top: 10px;
-  font-size: 14px;
-  background: rgba(0,0,0,0.6);
+.caption h1,
+.caption p {
   display: inline;
-  padding: 5px 10px;
+  background: rgba(0,0,0,0.82);
+  box-decoration-break: clone;
+  -webkit-box-decoration-break: clone;
+  padding: 0.12em 0.22em;
+}
+
+.caption h1 {
+  font-size: clamp(32px, 4vw, 58px);
+  line-height: 0.95;
+  font-weight: 900;
+  letter-spacing: -1.5px;
+}
+
+.caption p {
+  display: inline-block;
+  margin-top: 18px;
+  font-size: 13px;
+  line-height: 1.4;
+}
+
+html {
+  scroll-snap-type: y mandatory;
+  scroll-behavior: smooth;
+}
+
+.project {
+  scroll-snap-align: start;
 }
