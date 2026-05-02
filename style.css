@@ -147,7 +147,7 @@ header {
 
 /* FOOTER */
 .footer {
-  height: 200vh;
+  height: 100vh;
   background: black;
 
   display: flex;
