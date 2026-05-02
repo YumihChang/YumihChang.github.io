@@ -144,3 +144,40 @@ header {
     max-width: 100%;
   }
 }
+
+/* FOOTER */
+.footer {
+  height: 60vh;
+  background: black;
+
+  display: flex;
+  align-items: center;
+
+  padding-left: var(--side-space);
+  padding-right: var(--side-space);
+}
+
+.footer-content {
+  display: flex;
+  gap: 120px;
+}
+
+.footer-column h2 {
+  font-family: "Anton", sans-serif;
+  font-size: 64px;
+  margin-bottom: 20px;
+}
+
+.footer-column p,
+.footer-column a {
+  font-size: 14px;
+  color: white;
+  text-decoration: none;
+  display: block;
+  margin-bottom: 8px;
+}
+
+.footer-column a {
+  border-bottom: 1px solid white;
+  width: fit-content;
+}
