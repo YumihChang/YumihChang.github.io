@@ -120,8 +120,10 @@ header {
 
 /* DESCRIPTION */
 .caption p {
-  display: block;
-  margin-top: 18px;
+  display: inline;
+
+  position: relative;
+  top: 18px;
 
   font-size: 14px;
   line-height: 1.5;
@@ -129,8 +131,8 @@ header {
   background: rgba(0,0,0,var(--highlight-opacity));
   padding: 0.15em 0.35em;
 
-  width: fit-content;
-  max-width: 520px;
+  box-decoration-break: clone;
+  -webkit-box-decoration-break: clone;
 }
 
 /* MOBILE */
