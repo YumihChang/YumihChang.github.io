@@ -121,6 +121,7 @@ header {
 /* DESCRIPTION */
 .caption p {
   display: inline;
+
   font-size: 14px;
   line-height: 1.5;
 
@@ -129,6 +130,11 @@ header {
 
   box-decoration-break: clone;
   -webkit-box-decoration-break: clone;
+}
+
+.description-wrap {
+  max-width: 520px;
+  margin-top: 18px;
 }
 
 /* MOBILE */
