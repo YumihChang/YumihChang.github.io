@@ -7,7 +7,7 @@
 /* SETTINGS */
 :root {
   --side-space: 10%;
-  --highlight-opacity: 0.65; /* change this */
+  --highlight-opacity: 0.65;
 }
 
 html {
@@ -37,8 +37,8 @@ header {
 
   z-index: 100;
 
-  background: rgba(0,0,0,0.9);
-  border-bottom: 1px solid rgba(255,255,255,0.2);
+  background: rgba(0, 0, 0, 0.9);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
 }
 
 .logo {
@@ -52,30 +52,42 @@ header {
   font-weight: bold;
 }
 
-/* PROJECT */
+/* PROJECT SECTION */
 .project {
   position: relative;
   height: 100vh;
   width: 100%;
   overflow: hidden;
   scroll-snap-align: start;
+  background: black;
 }
 
-/* VIDEO */
+/* VIDEO AND GIF BACKGROUND */
 .project video,
-.project img {
+.project img,
+.project .bg-media {
   position: absolute;
-  inset: 0;
+  top: 0;
+  left: 0;
+
   width: 100%;
   height: 100%;
+
+  min-width: 100%;
+  min-height: 100%;
+
   object-fit: cover;
+  object-position: center center;
+
+  display: block;
 }
 
 /* OVERLAY */
 .overlay {
   position: absolute;
   inset: 0;
-  background: rgba(0,0,0,0.25);
+  background: rgba(0, 0, 0, 0.25);
+  z-index: 1;
 }
 
 /* TEXT */
@@ -87,16 +99,16 @@ header {
   z-index: 2;
 }
 
-/* TITLE (tight highlight) */
+/* TITLE */
 .caption h1 {
   display: inline;
   font-family: "Anton", sans-serif;
   font-size: clamp(38px, 5vw, 72px);
-  line-height: 1.00;
+  line-height: 1;
   text-transform: uppercase;
 
-  background: rgba(0,0,0,var(--highlight-opacity));
-  padding: 0em 0.15em 0.02em;
+  background: rgba(0, 0, 0, var(--highlight-opacity));
+  padding: 0 0.15em 0.02em;
 
   box-decoration-break: clone;
   -webkit-box-decoration-break: clone;
@@ -110,7 +122,7 @@ header {
   font-size: 14px;
   line-height: 1.5;
 
-  background: rgba(0,0,0,var(--highlight-opacity));
+  background: rgba(0, 0, 0, var(--highlight-opacity));
   padding: 0.15em 0.35em;
 
   width: fit-content;
